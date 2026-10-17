@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#5b21b6">
+<title>Alliance One</title>
+<style>
+body{margin:0;font-family:Arial;background:#f7f5ff;color:#24183b}
+header{background:#5b21b6;color:white;padding:30px 22px;border-radius:0 0 25px 25px}
+h1{margin:12px 0 6px;font-size:30px}
+main{padding:20px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.tile{background:white;border:1px solid #e9defe;border-radius:17px;padding:18px 12px;text-align:left;color:#24183b;min-height:110px}
+.tile span{font-size:27px}
+.tile b{display:block;margin:12px 0 6px}
+.tile small{color:#746b82;line-height:1.5}
+h2{font-size:19px}
+</style>
+</head>
+<body>
+<header>
+<div>ALLIANCE UNIVERSITY</div>
+<h1>Alliance One 💜</h1>
+<p>Your campus. Your classes. One place.</p>
+</header>
+<main>
+<h2>Your campus tools</h2>
+<div class="grid">
+<button class="tile" onclick="openTool('ERP')"><span>🏫</span><b>University ERP</b><small>Attendance, timetable and fees</small></button>
+<button class="tile" onclick="openTool('Blackboard')"><span>📚</span><b>Blackboard</b><small>Courses and assignments</small></button>
+<button class="tile" onclick="openTool('Meet')"><span>🎥</span><b>Meet / Teams</b><small>Online classes</small></button>
+<button class="tile" onclick="openTool('Forms')"><span>📝</span><b>Google Forms</b><small>Forms and surveys</small></button>
+<button class="tile" onclick="alert('Your student planner is coming next!')"><span>📅</span><b>My Planner</b><small>Tasks and deadlines</small></button>
+<button class="tile" onclick="alert('Your Help Centre is coming next!')"><span>💡</span><b>Help Centre</b><small>Student support</small></button>
+</div>
+</main>
+<script>
+function openTool(name){
+let url=prompt("Enter the official "+name+" website link:");
+if(!url)return;
+if(!/^https?:\/\//i.test(url)){alert("Please enter a link starting with https://");return;}
+window.open(url,"_blank","noopener");
+}
+</script>
+</body>
+</html>
